@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-app
+  template:
+    metadata:
+      labels:
+        app: devops-app
+    spec:
+      containers:
+      - name: devops-container
+        image: 820183542066.dkr.ecr.ap-south-1.amazonaws.com/devops-app:latest   # 👈 yahan tera ECR image
+        ports:
+        - containerPort: 3000     # 👈 Node app port (IMPORTANT)

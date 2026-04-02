@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: aws-load-balancer-controller
+  namespace: kube-system
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::820183542066:role/eksctl-devops-eks-addon-iamserviceaccount-kube-system-aws-load-balancer-controller-role
